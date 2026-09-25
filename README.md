@@ -31,6 +31,13 @@ streamlit run app.py          # chat UI
 `QDRANT_URL`, `QDRANT_API_KEY`. `LANGSMITH_API_KEY` + `LANGSMITH_TRACING=true`
 are optional (request tracing).
 
+Two more templates, both gitignored once filled in:
+
+- `.streamlit/secrets.toml.example` -> `.streamlit/secrets.toml` — Google
+  login for the Streamlit app (docs/13).
+- `deploy.env.example.yaml` -> `deploy.env.yaml` — Cloud Run env vars for
+  `gcloud run deploy --env-vars-file` (docs/12).
+
 ## The code, in reading order
 
 Every file is numbered in its docstring. `hr_assistant/`: **01** config ·

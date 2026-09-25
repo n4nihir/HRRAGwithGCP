@@ -1,0 +1,26 @@
+# Secrets never belong in an image (see docs/12).
+.env
+.env.*
+*.env
+deploy.env.yaml
+.streamlit/secrets.toml
+*.pem
+*.key
+*credentials*.json
+client_secret*.json
+
+# Not needed at runtime
+.git/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.langgraph_api/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+docs/
+results/
+commands/
+.DS_Store

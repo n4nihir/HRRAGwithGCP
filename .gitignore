@@ -23,6 +23,10 @@ genenv/
 *.env
 secrets.toml
 .streamlit/secrets.toml
+# ...but keep the placeholder templates committed
+!.env.example
+!*.example.yaml
+!*.toml.example
 *.pem
 *.key
 *.crt
@@ -39,6 +43,9 @@ client_secret*.json
 *.cache
 .fastembed_cache/
 fastembed_cache/
+
+# LangGraph dev server local state (`langgraph dev`) — pickled threads/runs
+.langgraph_api/
 
 # Testing, coverage, and code quality
 .pytest_cache/
@@ -71,3 +78,6 @@ logs/
 .Trashes
 Thumbs.db
 ehthumbs.db
+
+# Cloud Run env vars — contains API keys
+deploy.env.yaml
